@@ -1,0 +1,34 @@
+How Web Works?
+● HTML
+● CSS
+○ Layouts
+○ Selectors
+○ Media Queries
+○ Variables
+
+● JavaScript
+○ Importing JS (Async, Defer)
+○ Variables, ES6 let, const, var
+○ Hoisting
+○ Variable Types
+○ if/else, switch/case
+○ Loops
+○ functions
+○ Array functions
+○ Primitive Types vs Reference Types
+○ Mutation
+○ Callbacks / Promises
+○ Fetch API
+○ Dom & Dom Manipulation
+
+● JavaScript
+○ Try Catch
+○ Debugging
+○ Async Javascript
+○ OOP / Inheritance / Prototype
+○ This
+○ Closures
+○ Event Loop
+
+● JSON & XML
+● Typescript
