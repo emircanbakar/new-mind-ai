@@ -1,0 +1,15 @@
+○ Callbacks / Promises
+○ Fetch API
+○ Dom & Dom Manipulation
+
+● JavaScript
+○ Try Catch
+○ Debugging
+○ Async Javascript
+○ OOP / Inheritance / Prototype
+○ This
+○ Closures
+○ Event Loop
+
+● JSON & XML
+● Typescript
