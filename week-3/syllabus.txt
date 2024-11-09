@@ -1,0 +1,17 @@
+● Git
+● React
+○ React Giriş
+○ SPA
+○ Component
+○ State, Props
+○ Lifecycles
+○ Hooks
+○ Router
+○ Hoc
+○ Portal
+○ Lazy Load, Code Split
+○ Component Design Patterns
+○ Performance
+○ Error Boundaries
+
+React SPA, Virtual Dom, Component
