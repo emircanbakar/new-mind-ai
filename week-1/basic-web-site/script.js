@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 // var isSmoking // hoisting
 // console.log('script is executed from script.js');
 // alert('hello')
@@ -32,7 +32,6 @@ console.log(lastname); */
 
 console.log(i); */
 
-
 // let isSmoking = false;
 /* console.log(isSmoking);
 var isSmoking = false;
@@ -42,8 +41,6 @@ var isSmoking = true; */
 // 2. let and const came with EC6 EcmaScript
 // 3. var is global, let and const exist in only scope
 // 4. Hoisting
-
-
 
 /* const getNameArrow = () => {
   console.log('get name');
@@ -150,12 +147,12 @@ console.log('users', users);
 console.log('copyUsers', copyUsers); */
 
 const user = {
-  name: 'nikolay',
+  name: "nikolay",
   age: 15,
   company: {
-    name: 'google'
-  }
-}
+    name: "google",
+  },
+};
 
 // DEEP VS SHALLOW COPY
 
@@ -210,7 +207,6 @@ switch (university) {
     console.log('none of them');
     break
 } */
-
 
 /* for (let i = 0; i <= 10; i++) {
   console.log(i);
