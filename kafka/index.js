@@ -1,47 +1,32 @@
-const express = require("express");
 const { Kafka } = require("kafkajs");
 
-const app = express();
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-//kafka client setup
 const kafka = new Kafka({
-  clientId: "kafka-producer",
+  clientId: "my-kafka-producer2",
   brokers: ["localhost:9092"],
 });
 
-const producer = kafka.producer();
+const consumer = kafka.consumer({ groupId: "my-kafka-producer2" });
 
-const initKafkaProducer = async () => {
-  try {
-    await producer.connect();
-    console.log("producer connected");
-  } catch (error) {
-    console.log(error, "connection failed");
-    process.exit(1);
-  }
+const run = async () => {
+  // Consuming
+  await consumer.connect();
+  await consumer.subscribe({ topic: "order", fromBeginning: true });
+
+  await consumer.run({
+    eachMessage: async ({ topic, partition, message }) => {
+      createInvoice(message);
+      console.log({
+        partition,
+        offset: message.offset,
+        value: message.value.toString(),
+      });
+    },
+  });
 };
 
-app.post("/send", async (req, res) => {
-  try {
-    await producer.send({
-      topic: "order",
-      messages: [
-        {
-          value: "test",
-        },
-      ],
-    });
-    res.status(200).send({ message: "success" });
-  } catch (error) {
-    console.log(error, "error message");
-    res.status(500).send({ message: "failed" });
-  }
-});
+function createInvoice(message) {
+  console.log(message);
+  return true;
+}
 
-app.listen(8000, async () => {
-  await initKafkaProducer();
-  console.log("ayaktayiz");
-});
+run().catch(console.error);
